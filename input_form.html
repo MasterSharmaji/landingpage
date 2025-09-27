@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Content Manager</title>
+    <style>
+        /* Basic Form Styling (to keep it separate from the landing page CSS) */
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
+        .form-container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { text-align: center; margin-bottom: 30px; }
+        label { display: block; font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: #333; }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea { resize: vertical; height: 100px; }
+        .service-group { border: 1px dashed #ccc; padding: 20px; margin-bottom: 20px; border-radius: 4px; }
+        .publish-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        .publish-button:hover { background-color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Clarity Compass: Content Builder</h1>
+    <form id="contentForm">
+
+        <h2>1. Branding & Navigation</h2>
+        <label for="profName">Professional Name / Brand</label>
+        <input type="text" id="profName" value="Dr. Jane Doe" required>
+
+        <h2>2. Hero Section</h2>
+        <label for="headline">Compelling Headline (Result-Focused)</label>
+        <input type="text" id="headline" value="Stop Worrying About Retirement. Start Living It." required>
+        <label for="subHeadline">Sub-Headline (Brief Explanation)</label>
+        <textarea id="subHeadline">We offer a simplified, goal-oriented investment strategy designed for busy professionals.</textarea>
+        <label for="primaryCtaText">Primary CTA Button Text</label>
+        <input type="text" id="primaryCtaText" value="Book a Discovery Call">
+
+        <h2>3. About Section</h2>
+        <label for="bio">Narrative Bio (The "Why")</label>
+        <textarea id="bio">After seeing too many clients overwhelmed by complex financial jargon, I decided to create a clear, compassionate coaching practice focused on actionable steps.</textarea>
+
+        <h2>4. Service Modules (3 Total)</h2>
+        
+        <div class="service-group">
+            <h3>Service 1</h3>
+            <label for="service1Title">Title</label>
+            <input type="text" id="service1Title" value="The Clarity Audit">
+            <label for="service1Desc">Description</label>
+            <textarea id="service1Desc">A deep dive into your current financial situation and future goals.</textarea>
+        </div>
+        
+        <div class="service-group">
+            <h3>Service 2</h3>
+            <label for="service2Title">Title</label>
+            <input type="text" id="service2Title" value="Customized Strategy">
+            <label for="service2Desc">Description</label>
+            <textarea id="service2Desc">A personalized, actionable 5-year investment and savings plan.</textarea>
+        </div>
+        
+        <div class="service-group">
+            <h3>Service 3</h3>
+            <label for="service3Title">Title</label>
+            <input type="text" id="service3Title" value="Ongoing Coaching">
+            <label for="service3Desc">Description</label>
+            <textarea id="service3Desc">Monthly check-ins and adjustments to keep you on track.</textarea>
+        </div>
+
+        <h2>5. Testimonial (1 Main Quote)</h2>
+        <label for="quote">Quote</label>
+        <textarea id="quote">"I felt lost and overwhelmed before working with Jane. Now I have a clear plan and confidence in my future. I saw a 20% growth in my portfolio in the first year!"</textarea>
+        <label for="cite">Client Name, Title/Situation</label>
+        <input type="text" id="cite" value="Sarah K., Small Business Owner">
+
+        <button type="button" class="publish-button" onclick="generateLandingPage()">Preview & Publish</button>
+
+    </form>
+</div>
+
+<iframe id="landingPagePreview" style="width: 100%; height: 1000px; border: 1px solid #333; margin-top: 40px; display: none;"></iframe>
+
+<script>
+    // Include the JavaScript function here
+</script>
+</body>
+</html>
