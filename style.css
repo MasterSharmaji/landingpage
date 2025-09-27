@@ -1,0 +1,149 @@
+/* --- Global Reset & Variables --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #333; /* Dark Grey/Black for text and primary elements */
+    --color-secondary: #555; /* Medium Grey for backgrounds/accents */
+    --color-light: #f4f4f4; /* Light Grey for input fields and backgrounds */
+    --color-white: #fff;
+    --font-family: sans-serif;
+    --padding-lrg: 60px;
+    --padding-sml: 30px;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-primary);
+    background-color: var(--color-white);
+}
+
+/* --- Navigation & Header (Landing Page) --- */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--padding-sml);
+    z-index: 1000;
+}
+nav a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* --- Landing Page CTA Buttons --- */
+.cta-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.primary-cta {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+.secondary-cta {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+.large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* --- Landing Page Section Styling --- */
+.section {
+    padding: var(--padding-lrg) var(--padding-sml);
+    text-align: center;
+}
+.dark-bg {
+    background-color: var(--color-light);
+}
+.hero-section {
+    padding-top: calc(var(--padding-lrg) + 60px);
+}
+.split-content {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card {
+    flex: 1;
+    background-color: var(--color-white);
+    padding: 30px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+}
+.logo-placeholder, .icon-placeholder {
+    height: 40px;
+    width: 40px;
+    background-color: var(--color-secondary);
+    margin: 10px auto;
+}
+
+
+/* --- FORM/CMS STYLING --- */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.form-container h1 { text-align: center; margin-bottom: 30px; }
+label { display: block; font-weight: bold; margin-top: 15px; margin-bottom: 5px; color: var(--color-primary); }
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color-light);
+    box-sizing: border-box;
+}
+textarea { resize: vertical; height: 100px; }
+.service-group { border: 1px dashed var(--color-secondary); padding: 20px; margin-bottom: 20px; border-radius: 4px; }
+
+.publish-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.publish-button:hover { background-color: #555; }
+
+#finalHtmlOutput {
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+}
